@@ -88,16 +88,16 @@ function PhysicalHealth() {
     });
     const prompt = `
 Given the following data:
-- Race and Ethnicity: ${inputss.raceEthnicity}
-- Height: ${inputss.height}
-- Weight: ${inputss.weight}
-- Waist Circumference: ${inputss.waistCircumference}
-- Waist to Hip Ratio: ${inputss.waistToHipRatio}
-- Physical Activity Level: ${inputss.physicalActivityLevel}
-- Dietary Habits: ${inputss.dietaryHabit}
-- Medical Record: ${inputss.medicalRecord}
-- Age: ${inputss.age}
-- Gender: ${inputss.gender}
+- Race and Ethnicity: ${inputs.raceAndEthnicity}
+- Height: ${inputs.height}
+- Weight: ${inputs.weight}
+- Waist Circumference: ${inputs.waistCircumference}
+- Waist to Hip Ratio: ${inputs.waistToHipRatio}
+- Physical Activity Level: ${inputs.physicalActivityLevel}
+- Dietary Habits: ${inputs.dietaryHabit}
+- Medical Record: ${inputs.medicalRecord}
+- Age: ${inputs.age}
+- Gender: ${inputs.gender}
 
 Predict the person's current body health status (whether they are obese, normal weight, or slim). Additionally, predict if the person is likely to become obese in the future if they maintain their current lifestyle and provide a personalized solution to improve or maintain their health.
 give me a brief summary, that a user would like to read`;
