@@ -23,32 +23,32 @@ function PhysicalHealth() {
   });
   const [loading, setLoading] = useState(false);
   const [responseReceived, setResponseReceived] = useState(false); // New state for response tracking
-  //   function calculateBMI(height: string, weight: string): string {
-  //     const heightInMeters = parseInt(height) / 100;
-  //     const weightInKg = parseInt(weight);
-  //     const bmi = weightInKg / (heightInMeters * heightInMeters);
-  //     return bmi.toFixed(2);
-  //   }
-  //   const inputss = {
-  //     raceEthnicity: "Asian",
-  //     height: "170 cm", // Height in cm
-  //     weight: "70 kg", // Weight in kg
-  //     waistCircumference: "80 cm", // Waist circumference in cm
-  //     waistToHipRatio: "0.9", // Waist-to-hip ratio
-  //     physicalActivityLevel:
-  //       "Moderate (3-4 times a week, 45-minute sessions, mix of cardio and strength training)",
-  //     dietaryHabit:
-  //       "Balanced diet with three meals a day, including vegetables, fruits, lean proteins, occasional fast food (once a week)",
-  //     medicalRecord:
-  //       "No significant medical history, non-smoker, no dietary restrictions",
-  //     age: "28", // Age in years
-  //     gender: "Male", // Gender
-  //     BMI: calculateBMI("170", "70"), // Calculated BMI using height and weight
-  //     dailyDietDetails:
-  //       "Breakfast: Oatmeal with fruits, Lunch: Grilled chicken salad, Dinner: Stir-fried vegetables with tofu, Snacks: Almonds, apple",
-  //     exerciseDetails:
-  //       "Cardio: Running 3 times a week, 30 minutes each; Strength training: 2 times a week, 45 minutes each",
-  //   };
+  function calculateBMI(height: string, weight: string): string {
+    const heightInMeters = parseInt(height) / 100;
+    const weightInKg = parseInt(weight);
+    const bmi = weightInKg / (heightInMeters * heightInMeters);
+    return bmi.toFixed(2);
+  }
+  const inputss = {
+    raceEthnicity: "Asian",
+    height: "170 cm", // Height in cm
+    weight: "70 kg", // Weight in kg
+    waistCircumference: "80 cm", // Waist circumference in cm
+    waistToHipRatio: "0.9", // Waist-to-hip ratio
+    physicalActivityLevel:
+      "Moderate (3-4 times a week, 45-minute sessions, mix of cardio and strength training)",
+    dietaryHabit:
+      "Balanced diet with three meals a day, including vegetables, fruits, lean proteins, occasional fast food (once a week)",
+    medicalRecord:
+      "No significant medical history, non-smoker, no dietary restrictions",
+    age: "28", // Age in years
+    gender: "Male", // Gender
+    BMI: calculateBMI("170", "70"), // Calculated BMI using height and weight
+    dailyDietDetails:
+      "Breakfast: Oatmeal with fruits, Lunch: Grilled chicken salad, Dinner: Stir-fried vegetables with tofu, Snacks: Almonds, apple",
+    exerciseDetails:
+      "Cardio: Running 3 times a week, 30 minutes each; Strength training: 2 times a week, 45 minutes each",
+  };
 
   const [value, setValue] = useState("");
   const data = [
@@ -88,16 +88,16 @@ function PhysicalHealth() {
     });
     const prompt = `
 Given the following data:
-- Race and Ethnicity: ${inputs.raceAndEthnicity}
-- Height: ${inputs.height}
-- Weight: ${inputs.weight}
-- Waist Circumference: ${inputs.waistCircumference}
-- Waist to Hip Ratio: ${inputs.waistToHipRatio}
-- Physical Activity Level: ${inputs.physicalActivityLevel}
-- Dietary Habits: ${inputs.dietaryHabit}
-- Medical Record: ${inputs.medicalRecord}
-- Age: ${inputs.age}
-- Gender: ${inputs.gender}
+- Race and Ethnicity: ${inputss.raceEthnicity}
+- Height: ${inputss.height}
+- Weight: ${inputss.weight}
+- Waist Circumference: ${inputss.waistCircumference}
+- Waist to Hip Ratio: ${inputss.waistToHipRatio}
+- Physical Activity Level: ${inputss.physicalActivityLevel}
+- Dietary Habits: ${inputss.dietaryHabit}
+- Medical Record: ${inputss.medicalRecord}
+- Age: ${inputss.age}
+- Gender: ${inputss.gender}
 
 Predict the person's current body health status (whether they are obese, normal weight, or slim). Additionally, predict if the person is likely to become obese in the future if they maintain their current lifestyle and provide a personalized solution to improve or maintain their health.
 give me a brief summary, that a user would like to read`;
