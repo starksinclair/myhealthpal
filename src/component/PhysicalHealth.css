@@ -1,0 +1,118 @@
+body {
+  font-family: "Franklin Gothic Medium", "Arial Narrow", Arial, sans-serif;
+  background-color: #fff;
+}
+h1,
+h2 {
+  margin-left: 20px;
+}
+.back-btn {
+  float: right;
+  position: fixed;
+  right: 0;
+}
+
+input {
+  padding: 1em;
+  border: none;
+  width: 250px;
+  border-radius: 20px;
+  /* border-color: rgba(236, 241, 255, 1); */
+  background-color: #ecf1ff;
+}
+.section {
+  display: inline-block;
+  margin: 0px 15px 10px 15px;
+}
+.section-container {
+  display: grid;
+}
+
+#first-section {
+  width: 50%;
+}
+.response {
+  width: 40%;
+  background-color: rgba(236, 241, 255, 1);
+  border-radius: 25px;
+  position: sticky;
+  top: 5rem;
+  height: max-content;
+  padding: 1rem;
+}
+.all {
+  display: flex;
+  justify-content: space-between;
+  margin: 0 2rem;
+  /* align-items: center; */
+}
+#enter-bar {
+  padding: 0.5em;
+  border: none;
+  width: 180px;
+  border-radius: 15px;
+  background-color: rgba(28, 40, 161, 1);
+  margin: 2em;
+  color: rgba(236, 241, 255, 1);
+  font-size: 18px;
+}
+@media (min-width: 767.5px) and (max-width: 1180px) {
+  .value {
+    height: 30px;
+    width: 200px;
+  }
+  #first-section {
+    height: max-content;
+    /* width: 500px; */
+  }
+}
+@media screen and (max-width: 700px) {
+  .value {
+    /* height: 30px; */
+    width: 100%;
+  }
+  .all {
+    flex-direction: column;
+  }
+  .response {
+    position: relative;
+  }
+  .section-container {
+    display: flex;
+    flex-direction: column;
+  }
+  #first-section {
+    width: 100%;
+  }
+  #enter-bar {
+    display: grid;
+    place-content: center;
+  }
+  input {
+    width: 100%;
+  }
+  .response {
+    width: 100%;
+    top: 1rem;
+  }
+}
+.loader {
+  border: 8px solid #f3f3f3; /* Light grey */
+  border-top: 8px solid #3498db; /* Blue */
+  border-radius: 50%;
+  width: 40px; /* Size of the loader */
+  height: 40px; /* Size of the loader */
+  display: grid;
+  place-content: center;
+  animation: spin 1s linear infinite; /* Animation */
+  margin: auto; /* Center the loader */
+}
+
+@keyframes spin {
+  0% {
+    transform: rotate(0deg);
+  }
+  100% {
+    transform: rotate(360deg);
+  }
+}

@@ -1,0 +1,41 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+body {
+  font-family: Arial, sans-serif;
+  font-family: "Franklin Gothic Medium", "Arial Narrow", Arial, sans-serif;
+}
+section h1 {
+  font-weight: bold;
+  color: rgba(28, 40, 161, 1);
+  font-size: 50px;
+  margin-top: 5rem;
+}
+section input {
+  height: 2.5rem;
+  width: 30%;
+  border-top-left-radius: 1rem;
+  border-bottom-left-radius: 1rem;
+  border: none;
+  margin-top: 1rem;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.2), -10px 0 0 rgba(0, 0, 0, 0);
+  padding-left: 1rem;
+}
+button {
+  cursor: pointer;
+  height: 2.5rem;
+  width: 2.5rem;
+  border: none;
+  background-color: rgba(28, 40, 161, 1);
+  color: #fff;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
+  border-top-right-radius: 1rem;
+  border-bottom-right-radius: 1rem;
+}
+
+#history {
+  margin: 2em;
+  border: rgba(28, 40, 161, 1);
+}
